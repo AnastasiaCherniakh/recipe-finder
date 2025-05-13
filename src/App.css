@@ -49,6 +49,14 @@ main {
   width: 150px;
   background-color: hsl(0, 0%, 0%);
   color: hsl(0, 0%, 100%);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-ingredient-form > button:hover {
+  background-color: hsl(0, 0%, 10%);
+  transform: translateY(-1px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 .add-ingredient-form > button::before {
