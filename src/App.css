@@ -64,9 +64,74 @@ main {
   margin-right: 5px;
 }
 
+.ingredient-list {
+  margin-bottom: 48px;
+}
+
+.ingredient-list > li {
+  line-height: 28px;
+  color: hsl(216, 18%, 34%);
+}
+
+.get-recipe-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 18px;
+  background-color: hsl(48, 14%, 93%);
+  border-radius: 8px;
+}
+
+.get-recipe-container h3 {
+  font-size: 1.1rem;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.get-recipe-container p {
+  font-size: 0.875rem;
+  line-height: 20px;
+  color: #6B7280;
+}
+
+.get-recipe-container .get-recipe-button {
+  background-color: hsl(262, 83%, 58%); 
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  padding: 9px 17px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.get-recipe-container .get-recipe-button:hover {
+   background-color: #6b26d9; 
+   transform: translateY(-1px);
+   box-shadow: 0 3px 6px rgba(124, 58, 237, 0.3); 
+}
+
+/* Medium devices: Tablets */
+@media (min-width: 37.5em) {
+    .get-recipe-container h3 {
+      font-size: 1.125rem;
+  }
+
+  .get-recipe-container .get-recipe-button{
+    padding: 12px 25px;
+  }
+}
+
 /* Large devices: Laptops and desktops */
 @media (min-width: 64em) {
   .add-ingredient-form > button {
     width: 190px;
   }
+
+  .get-recipe-container {
+    padding: 10px 45px;
+  }
+
 }

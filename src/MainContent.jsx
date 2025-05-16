@@ -8,7 +8,7 @@ export default function MainContent() {
         setIngredients(prevIngredients => [...prevIngredients, newIngredient]);
     }
 
-    const ingredientListItem = ingredients.map(ingredient => (
+    const ingredientListItems = ingredients.map(ingredient => (
         <li key={ingredient}>{ingredient}</li>
     ));
 
@@ -18,9 +18,17 @@ export default function MainContent() {
                 <input type="text" name="ingredient" aria-label="Add ingredient" placeholder="e.g. tomatoes" />
                 <button>Add Ingredient</button>
             </form>
-        <ul>
-            {ingredientListItem}
-        </ul>
+        {ingredients.length > 0 && <section>
+            <h2>Ingredients on hand:</h2>
+            <ul className='ingredient-list'>{ingredientListItems}</ul>
+            {ingredients.length > 3 && <div className='get-recipe-container'>
+                <div>
+                    <h3>Ready for a recipe?</h3>
+                    <p>Generate a recipe from your list of ingredients</p>
+                </div>
+            <button className='get-recipe-button'>Get a recipe</button>
+            </div>}
+        </section>}
         </main>
     )
 }
