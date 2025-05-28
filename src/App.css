@@ -9,11 +9,11 @@ nav {
 }
 
 nav .img-logo {
-    width: 50px;
+    width: 45px;
 }
 
 nav .text-logo {
-    font-size: 2rem;
+    font-size: 1.3rem;
     line-height: 3.75rem;
     font-weight: 400;
     letter-spacing: 1.3px;
@@ -21,6 +21,11 @@ nav .text-logo {
 
 main {
   padding: 40px 30px 10px;
+}
+
+main .loading{
+  font-size: 1rem;
+  color: black;
 }
 
 .add-ingredient-form {
@@ -113,19 +118,29 @@ main {
    box-shadow: 0 3px 6px rgba(124, 58, 237, 0.3); 
 }
 
-/* Medium devices: Tablets */
-@media (min-width: 37.5em) {
-    .get-recipe-container h3 {
-      font-size: 1.125rem;
+/* Styles for devices between 414px and 650px */
+@media (min-width: 25.875em) and (max-width: 40.825em){
+  nav .text-logo {
+    font-size: 1.8rem;
   }
 
-  .get-recipe-container .get-recipe-button{
-    padding: 12px 25px;
+  nav .img-logo {
+    width: 50px;
   }
+
 }
 
-/* Large devices: Laptops and desktops */
-@media (min-width: 64em) {
+/* Medium devices: Tablets */
+@media (min-width: 40.625em) {
+  
+  nav .text-logo {
+    font-size: 2rem;
+  }
+
+  nav .img-logo {
+    width: 50px;
+  }
+
   .add-ingredient-form > button {
     width: 190px;
   }
@@ -134,4 +149,11 @@ main {
     padding: 10px 45px;
   }
 
+  .get-recipe-container h3 {
+    font-size: 1.125rem;
+  }
+
+  .get-recipe-container .get-recipe-button{
+    padding: 12px 25px;
+  }
 }
