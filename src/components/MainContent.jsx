@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import IngredientsList from './IngredientsList';
+import Recipe from './Recipe';
 export default function MainContent() {
 
     const [ingredients, setIngredients] = useState([]);
@@ -37,16 +38,18 @@ export default function MainContent() {
                 <input type="text" name="ingredient" aria-label="Add ingredient" placeholder="e.g. tomatoes" />
                 <button>Add Ingredient</button>
             </form>
-        {ingredients.length > 0 && <IngredientsList ingredients={ingredients} getRecipe={getRecipe} />}
-        {isLoading ? (
-            <p className='loading'>Generating...</p>
-        ) : (
-            recipe && (
-                <section>
-                    <h2>Your Recipe</h2>
-                    <pre>{recipe}</pre>
-                </section>)
-        )}
+            {ingredients.length > 0 && <IngredientsList ingredients={ingredients} getRecipe={getRecipe} />}
+            {isLoading ? (
+                <p className='loading'>Generating...</p>
+            ) : (
+                recipe && (
+                    <section className='recipe'>
+                        <h2>Your Recipe</h2>
+                        <div className="markdown">
+                            <Recipe recipeText={recipe} />
+                        </div>
+                    </section>)
+            )}
         </main>
     )
 }

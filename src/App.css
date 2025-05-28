@@ -85,6 +85,7 @@ main .loading{
   padding: 10px 18px;
   background-color: hsl(48, 14%, 93%);
   border-radius: 8px;
+  margin-bottom: 45px;
 }
 
 .get-recipe-container h3 {
@@ -118,6 +119,35 @@ main .loading{
    box-shadow: 0 3px 6px rgba(124, 58, 237, 0.3); 
 }
 
+main .recipe {
+  margin-top: 10px;
+}
+
+.recipe h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.markdown p {
+    line-height: 1.6;
+    text-align: center;
+}
+
+.markdown h3, h4 {
+  text-align: center;
+}
+
+.markdown hr {
+  border: none;
+  border-top: 1px solid  hsl(0, 0%, 80%);
+  margin: 32px 0;
+}
+
+.markdown ol {
+  padding-left: 16px;
+  list-style-position: inside;
+}
+
 /* Styles for devices between 414px and 650px */
 @media (min-width: 25.875em) and (max-width: 40.825em){
   nav .text-logo {
@@ -126,6 +156,10 @@ main .loading{
 
   nav .img-logo {
     width: 50px;
+  }
+
+  .markdown p {
+    text-align: center;
   }
 
 }
@@ -155,5 +189,28 @@ main .loading{
 
   .get-recipe-container .get-recipe-button{
     padding: 12px 25px;
+  }
+
+  .markdown {
+    padding-left: 20px;
+  }
+
+  .markdown p {
+    text-align: left;
+  }
+
+  .markdown h3, h4 {
+  text-align: left;
+  }
+
+  .markdown ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+  }
+
+  .markdown ol {
+    padding-left: 32px;
+    list-style-position: outside;
+    text-align: left;
   }
 }
