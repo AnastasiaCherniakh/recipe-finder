@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Instructions from './Instructions';
 import IngredientsList from './IngredientsList';
 import Recipe from './Recipe';
 import toast from 'react-hot-toast';
@@ -55,6 +56,7 @@ export default function MainContent() {
                 <input type="text" name="ingredient" aria-label="Add ingredient" placeholder="e.g. tomatoes" />
                 <button>Add Ingredient</button>
             </form>
+            {ingredients.length === 0 &&  <Instructions />}
             {ingredients.length > 0 && <IngredientsList ingredients={ingredients} getRecipe={getRecipe} />}
             {isLoading ? (
                 <div className="spinner">

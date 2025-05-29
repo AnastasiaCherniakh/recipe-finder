@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <Header />
-      <Toaster position="top-left" />
+      <Toaster position="top-right" />
       <MainContent />
     </>
   )

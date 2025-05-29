@@ -69,6 +69,29 @@ main .loading{
   margin-right: 5px;
 }
 
+.instructions {
+  margin-top: 80px;
+  padding: 24px 36px;
+  background: hsla(262, 83%, 58%, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  backdrop-filter: blur(3px);
+}
+
+.instructions h2 {
+  font-size: 20px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.instructions li {
+  color: #333;
+  margin-bottom: 12px;
+}
+
 .ingredient-list {
   margin-bottom: 48px;
   font-size: 1.125rem;
@@ -158,6 +181,7 @@ main .recipe {
 
 /* Styles for devices between 414px and 650px */
 @media (min-width: 25.875em) and (max-width: 40.825em){
+  
   nav .text-logo {
     font-size: 1.8rem;
   }
@@ -166,13 +190,17 @@ main .recipe {
     width: 50px;
   }
 
+  .instructions h2 {
+    font-size: 25px;
+  }
+
   .markdown p {
     text-align: center;
   }
 
 }
 
-/* Medium devices: Tablets */
+/* Styles for screens wider than 650px */
 @media (min-width: 40.625em) {
   
   nav .text-logo {
@@ -181,6 +209,10 @@ main .recipe {
 
   nav .img-logo {
     width: 50px;
+  }
+
+  .instructions h2 {
+    font-size: 25px;
   }
 
   .add-ingredient-form > button {
