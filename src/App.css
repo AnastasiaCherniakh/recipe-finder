@@ -47,7 +47,7 @@ main .loading{
 
 .add-ingredient-form > button {
   font-family: "Montserrat", sans-serif;
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   font-weight: 500;
   border-radius: 6px;
   border: none;
@@ -120,6 +120,13 @@ main .loading{
    box-shadow: 0 3px 6px rgba(124, 58, 237, 0.3); 
 }
 
+main .spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
 main .recipe {
   margin-top: 10px;
 }
@@ -178,6 +185,7 @@ main .recipe {
 
   .add-ingredient-form > button {
     width: 190px;
+    font-size: 0.875rem;
   }
 
   .get-recipe-container {

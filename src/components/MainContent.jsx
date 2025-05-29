@@ -1,7 +1,8 @@
-import toast from 'react-hot-toast';
 import { useState } from 'react';
 import IngredientsList from './IngredientsList';
 import Recipe from './Recipe';
+import toast from 'react-hot-toast';
+import { ClipLoader } from "react-spinners";
 export default function MainContent() {
 
     const [ingredients, setIngredients] = useState([]);
@@ -56,7 +57,13 @@ export default function MainContent() {
             </form>
             {ingredients.length > 0 && <IngredientsList ingredients={ingredients} getRecipe={getRecipe} />}
             {isLoading ? (
-                <p className='loading'>Generating...</p>
+                <div className="spinner">
+                    <ClipLoader
+                        color="#7c3bed"
+                        size={60}
+                        aria-label="Loading Spinner"
+                    />
+                </div>
             ) : (
                 recipe && (
                     <section className='recipe'>
