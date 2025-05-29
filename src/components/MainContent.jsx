@@ -54,12 +54,12 @@ export default function MainContent() {
         <main>
             <form action={addIngredient} className="add-ingredient-form">
                 <input type="text" name="ingredient" aria-label="Add ingredient" placeholder="e.g. tomatoes" />
-                <button>Add Ingredient</button>
+                <button type="submit">Add Ingredient</button>
             </form>
             {ingredients.length === 0 &&  <Instructions />}
             {ingredients.length > 0 && <IngredientsList ingredients={ingredients} getRecipe={getRecipe} />}
             {isLoading ? (
-                <div className="spinner">
+                <div className="spinner" role="status" aria-live="polite">
                     <ClipLoader
                         color="#7c3bed"
                         size={60}
@@ -68,7 +68,7 @@ export default function MainContent() {
                 </div>
             ) : (
                 recipe && (
-                    <section className='recipe'>
+                    <section className='recipe' aria-live="polite">
                         <h2>Your Recipe</h2>
                         <div className="markdown">
                             <Recipe recipeText={recipe} />
