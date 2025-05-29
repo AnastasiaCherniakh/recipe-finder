@@ -71,6 +71,7 @@ main .loading{
 
 .ingredient-list {
   margin-bottom: 48px;
+  font-size: 1.125rem;
 }
 
 .ingredient-list > li {

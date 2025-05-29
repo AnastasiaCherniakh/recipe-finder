@@ -1,3 +1,4 @@
+import toast from 'react-hot-toast';
 import { useState } from 'react';
 import IngredientsList from './IngredientsList';
 import Recipe from './Recipe';
@@ -8,8 +9,23 @@ export default function MainContent() {
     const [isLoading, setIsLoading] = useState(false);
 
     function addIngredient(formData) {
-        const newIngredient = formData.get("ingredient");
-        setIngredients(prevIngredients => [...prevIngredients, newIngredient]);
+        const rawInput = formData.get("ingredient");
+        const cleanedInput = rawInput.trim().toLowerCase();
+
+        // Validate empty or whitespace-only input
+        if(!cleanedInput) {
+            toast.error("Please enter a valid ingredient");
+            return;
+        }
+
+        // Prevent duplicates
+        if(ingredients.includes(cleanedInput)){
+            toast.error("You already added this ingredient");
+            return;
+        }
+
+        setIngredients(prevIngredients => [...prevIngredients, cleanedInput]);
+        toast.success(`${cleanedInput} added!`);
     }
 
     async function getRecipe(ingredients) {
