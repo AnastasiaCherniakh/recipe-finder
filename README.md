@@ -1,12 +1,43 @@
-# React + Vite
+# 🥘 Recipe finder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive web app that helps users discover meal ideas based on ingredients they already have at home. Powered by AI, it generates a personalized recipe suggestion busing the selected ingredients.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[Try the app](https://recipe-finder-random.netlify.app/)
 
-## Expanding the ESLint configuration
+## ⚡ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Add ingredients one by one
+- Prevents duplicates or empty entries
+- Displays a recipe after 4+ ingredients are entered
+- Loading indicator while fetching recipe
+- AI-generated output rendered with Markdown
+- Responsive layout and mobile-friendly design
+- Friendly onboarding tips and toast notifications
+
+## 🛠️ Tech Stack
+
+- **React**: Frontend UI and component logic
+- **Netlify Functions** - Serverless backend for API handling
+- **OpenRouter API + DeepSeek model** - AI-powered recipe generation
+- **React Hot Toast** - Clean and accessible notifications
+- **React Markdown** - To format the recipe content
+- **React Spinners** - Smooth loading animation
+- **CSS Media Queries** - For responsive styling
+
+## 📸 Screenshots
+
+**Start Screen** 
+![Start screen](./src/assets/start-screen.png)
+
+**Recipe Suggestion View**
+![Recipe Screen](./src/assets/recipe-suggestion.png)
+
+## 💡 Why I Built This
+
+I wanted to explore AI integration in front-end development and solve a real-life problem: deciding what to cook with limited ingredients. This project helped me practice working with serverless functions, external API and state management in React. 
+
+---
+
+Thanks for checking it out! 😊
