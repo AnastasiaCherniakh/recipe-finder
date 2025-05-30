@@ -1,6 +1,6 @@
 # 🥘 Recipe finder
 
-A responsive web app that helps users discover meal ideas based on ingredients they already have at home. Powered by AI, it generates a personalized recipe suggestion busing the selected ingredients.
+A responsive web app that helps users discover meal ideas based on ingredients they already have at home. Powered by AI, it generates a personalized recipe suggestion using the selected ingredients.
 
 ## 🚀 Live Demo
 
@@ -18,7 +18,7 @@ A responsive web app that helps users discover meal ideas based on ingredients t
 
 ## 🛠️ Tech Stack
 
-- **React**: Frontend UI and component logic
+- **React** - Frontend UI and component logic
 - **Netlify Functions** - Serverless backend for API handling
 - **OpenRouter API + DeepSeek model** - AI-powered recipe generation
 - **React Hot Toast** - Clean and accessible notifications
