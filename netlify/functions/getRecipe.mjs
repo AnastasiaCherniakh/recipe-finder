@@ -52,7 +52,7 @@ export async function handler(event) {
                 "Content-Type": 'application/json'
             },
             body: JSON.stringify({ 
-                model: "x-ai/grok-4-fast:free",
+                model: "tngtech/deepseek-r1t-chimera:free",
                 messages : [
                     {role: "user", content: prompt} // User message sent to the model
                 ]
