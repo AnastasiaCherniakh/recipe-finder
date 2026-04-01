@@ -52,7 +52,7 @@ export async function handler(event) {
                 "Content-Type": 'application/json'
             },
             body: JSON.stringify({ 
-                model: "tngtech/deepseek-r1t-chimera:free",
+                model: "stepfun/step-3.5-flash:free",
                 messages : [
                     {role: "user", content: prompt} // User message sent to the model
                 ]
